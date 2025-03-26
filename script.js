@@ -1,36 +1,60 @@
-function verificarPar(numero){
-    if(numero % 2 === 0) {
-        // === é estritamente igual, é igual em tipo e conteudo
-        console.log('par');
-    }else{
-        console.log('impar');
+function verificarPar(numero) {
+    if (numero % 2 === 0) {
+        console.log("Par");
+    } else {
+        console.log("Ímpar");
     }
 }
 
-verificarPar(4);
-verificarPar(7);
-
-function calcular(n1,n2){
-
-    const soma = n1 + n2;
-    const subtracao = n1 - n2
-    const divisao = n2 !== 0 ? n1 / n2: 'Não pode dividir por zero';
-    multiplicacao = n1 * n2;
-
-    console.log(soma);
-    console.log(subtracao);
-    console.log(divisao)
-    console.log(multiplicacao)
-
+function calcular(num1, num2) {
+    const soma = num1 + num2;
+    const subtracao = num1 - num2;
+    const multiplicacao = num1 * num2;
+    const divisao = num1 / num2;
+    return { soma, subtracao, multiplicacao, divisao };
 }
 
-let n1 = parseFloat(prompt("Digite o primeiro numero:"));
-let n2 = parseFloat(prompt("Digite o primeiro numero:"));
-
-let numero = 10;
-let delay =0;
-while (numero >=1){
-        console.log(numero);
-        numero--;
+let contador = 10;
+while (contador >= 1) {
+    console.log(contador);
+    contador--;
 }
 
+function inverterTexto(texto) {
+    return texto.split('').reverse().join('');
+}
+
+function contarCaracteres(texto) {
+    return texto.length;
+}
+
+const carro = {
+    marca: "Volkswagen",
+    modelo: "gol",
+    ano: 2015
+};
+
+console.log(carro.marca);
+console.log(carro.ano)
+console.log(carro.modelo)
+
+function mensagemPersonalizada(nome, mensagem = "Olá!") {
+    console.log(`${mensagem} ${nome}`);
+}
+
+function media(num1, num2, num3) {
+    return (num1 + num2 + num3) / 3;
+}
+
+for (let i = 1; i <= 20; i++) {
+    if (i % 3 === 0) {
+        console.log(`${i} - Múltiplo de 3`);
+    } else {
+        console.log(`${i} - Não múltiplo de 3`);
+    }
+}
+
+function verificarPalindromo(palavra) {
+    const palavraInvertida = palavra.split('').reverse().join('');
+    return palavra === palavraInvertida;
+}
